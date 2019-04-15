@@ -1,1 +1,15 @@
+C:\Users\jose osorio soto\HDOOA\JDBC\DBResearch\src\main\java\com\db\ex\models\Asignatura.java
+C:\Users\jose osorio soto\HDOOA\JDBC\DBResearch\src\main\java\com\db\ex\dao\MatriculaDAO.java
+C:\Users\jose osorio soto\HDOOA\JDBC\DBResearch\src\main\java\com\db\ex\dao\mysqldao\AsignaturaMySQL.java
+C:\Users\jose osorio soto\HDOOA\JDBC\DBResearch\src\main\java\com\db\ex\models\Alumno.java
+C:\Users\jose osorio soto\HDOOA\JDBC\DBResearch\src\main\java\com\db\ex\dao\mysqldao\AlumnoMySQL.java
+C:\Users\jose osorio soto\HDOOA\JDBC\DBResearch\src\main\java\com\db\ex\dao\mysqldao\MySQLConnection.java
 C:\Users\jose osorio soto\HDOOA\JDBC\DBResearch\src\main\java\com\db\ex\App.java
+C:\Users\jose osorio soto\HDOOA\JDBC\DBResearch\src\main\java\com\db\ex\models\Profesor.java
+C:\Users\jose osorio soto\HDOOA\JDBC\DBResearch\src\main\java\com\db\ex\models\Matricula.java
+C:\Users\jose osorio soto\HDOOA\JDBC\DBResearch\src\main\java\com\db\ex\dao\ProfesorDAO.java
+C:\Users\jose osorio soto\HDOOA\JDBC\DBResearch\src\main\java\com\db\ex\dao\AsignaturaDAO.java
+C:\Users\jose osorio soto\HDOOA\JDBC\DBResearch\src\main\java\com\db\ex\dao\mysqldao\MatriculaMySQL.java
+C:\Users\jose osorio soto\HDOOA\JDBC\DBResearch\src\main\java\com\db\ex\dao\DAO.java
+C:\Users\jose osorio soto\HDOOA\JDBC\DBResearch\src\main\java\com\db\ex\dao\AlumnoDAO.java
+C:\Users\jose osorio soto\HDOOA\JDBC\DBResearch\src\main\java\com\db\ex\dao\mysqldao\ProfesorMySQL.java
