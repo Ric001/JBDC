@@ -4,16 +4,21 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.DriverManager;
 public class MySQLConnection {
-    public static Connection connect() {
-
+    public Connection connect() {
+        Connection connection = null;
         try {
             String user = "root";
             String password = "admin";
             String link = "jdbc:mysql://localhost/studentsys";
-            return DriverManager.getConnection(link, user, password);
+            Class.forName("com.jdbc.mysql.Driver");
+            connection =  DriverManager.getConnection(link, user, password);
+
         } catch (SQLException ex) {
             ex.printStackTrace();
-        } 
-        return null;
+        } catch (ClassNotFoundException ex) {
+            ex.printStackTrace();
+        }
+        return connection;
     }
+
 }
