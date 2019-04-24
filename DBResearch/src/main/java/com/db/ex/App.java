@@ -16,8 +16,5 @@ public class App
         System.exit(0);
     }    
 
-    public void add (AlumnoDAO dao) {
-        
-    }
     
 }
