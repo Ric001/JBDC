@@ -1,19 +1,26 @@
 package com.db.ex;
 
-import com.db.ex.dao.DAO;
-import com.db.ex.dao.mysqldao.AlumnoMySQL;
-import com.db.ex.dao.mysqldao.MySQLConnection;
-
-import java.util.Date;
+import java.sql.DriverManager;
+import java.sql.Connection;
+import java.sql.SQLException;
 import java.util.logging.Logger;
-import com.db.ex.models.Alumno;
 public class App 
 {
     private final static Logger LOGGER = Logger.getLogger(App.class.getName());
     public static void main(String[] args) {
-        AlumnoMySQL alumnoDao = new AlumnoMySQL();
-        alumnoDao.add(new Alumno(new Long(1222222), "Julio", "Marin Perez", new Date()));
-        System.exit(0);
+        String url = "jdbc:mysql://localhost:3306/BookSellerDB";
+        String user = "root";
+        String password = "admin";
+        
+        try {
+            Connection connection = DriverManager.getConnection(url, user, password);
+            if (!connection.isClosed()) {
+                LOGGER.info("Connections Stablished Succesfully");
+            }
+            System.exit(0);
+        } catch(SQLException e) {
+            e.printStackTrace();
+        }
     }    
 
     

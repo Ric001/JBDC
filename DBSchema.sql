@@ -22,3 +22,11 @@ CREATE TABLE Books_By_Author(
     FOREIGN KEY(AuthorID) REFERENCES Authors(AuthorID),
     FOREIGN KEY(ISBN) REFERENCES Books(ISBN)
 );
+
+CREATE TABLE Customers(
+    CustomerID INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    FirstName VARCHAR(100),
+    LastName VARCHAR(100),
+    EMail VARCHAR(50),
+    Phone VARCHAR(80)
+);
