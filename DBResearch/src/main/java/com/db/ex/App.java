@@ -39,39 +39,31 @@ public class App {
         ResultSet rs = stm.executeQuery(query);
         final int TYPE = ResultSet.TYPE_SCROLL_INSENSITIVE;
         DatabaseMetaData dbmd = connection.getMetaData();
-        Statement statement = connection.createStatement();
-        statement.addBatch("INSERT INTO Books(ISBN, Title, PubDate, Format, Price) VALUES('199992200', 'Some Kisses', now(), 'HardCover', 990.00)");
-        statement.addBatch("INSERT INTO Books(ISBN, Title, PubDate, Format, Price) VALUES('0000445', 'Bunbury Bio', now(), 'HardCover', 990.00)");
-        statement.executeBatch(); 
+        
         final String INSERT_NEW_EMPLOYEE = "INSERT INTO Employees(FirstName, LastName, Phone, Salary, Designation) VALUES (? , ? , ?, ?, ?)";
         PreparedStatement ps = connection.prepareStatement(INSERT_NEW_EMPLOYEE);
 
         int counter = 0; 
-        while (counter <= 2) {
-            insertNewEmployees(connection, ps);
+            String[] firsts = {"Rick", "Ursula"};
+            String[] lasts = {"Sanchez", "Mercury"};
+            String[] designation = {"Scientific", "CEO"};
+            for (int i = 0; i < designation.length; i++) {
+                String employeeId = UUID.randomUUID().toString();
+                System.out.println(employeeId);
+                ps.setString(1, firsts[i]);
+                ps.setString(2, lasts[i]);
+                ps.setString(3, "99900");
+                ps.setDouble(4, 999.99);
+                ps.setString(5, designation[i]);
+                ps.addBatch();
+            }      
             counter++;
-        }    
+         
         ps.executeBatch();
         System.exit(0);
     }
 
-    private static void insertNewEmployees(Connection connection, PreparedStatement ps) throws SQLException{
-        String[] Firsts = {"Rick", "Ursula"};
-        String[] lasts = {"Sanchez", "Mercury"};
-        String[] designation = {"Scientific", "CEO"};
-        for (int i = 0; i < designation.length; i++) {
-            String employeeId = UUID.randomUUID().toString();
-            System.out.println(employeeId);
-            ps.setString(1, Firsts[i]);
-            ps.setString(2, lasts[i]);
-            ps.setString(3, "99900");
-            ps.setDouble(4, 999.99);
-            ps.setString(5, designation[i]);
-            ps.addBatch();
-        }      
     
-
-    } 
 
     private static void dbMetaData(Connection conn) throws SQLException{
         if (conn != null) {
