@@ -30,3 +30,11 @@ CREATE TABLE Customers(
     EMail VARCHAR(50),
     Phone VARCHAR(80)
 );
+
+CREATE TABLE Employees(
+    EmployeeID INT NOT NULL PRIMARY KEY AUTO_INCREMENT, 
+    FirstName VARCHAR(100),
+    LastName VARCHAR(100),
+    Phone VARCHAR(15),
+    Salary DECIMAL
+);
